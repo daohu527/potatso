@@ -19,13 +19,16 @@ struct TreeNode {
 
 class KdTree {
  public:
-  void BuildTree(const std::vector<Vector2D> &nodes);
+  void BuildTree(const std::vector<Vector2D> &vecs);
 
   void Add(TreeNode *node);
 
   void Delete(TreeNode *node);
 
-  bool FindNearestNode(TreeNode *node, double distance, TreeNode *nearest_node);
+  bool FindNearestNode(const Vector2D &vec, TreeNode &nearest_node);
+
+  bool FindNodeByDistance(const Vector2D &vec, double distance, 
+                          std::vector<TreeNode> &nodes);
 
  private:
   TreeNode *root_;
