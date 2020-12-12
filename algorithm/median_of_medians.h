@@ -2,7 +2,7 @@
 
 #include <vector>
 #include <cstdlib>
-#include <assert.h>
+#include <cassert>
 
 namespace potatso {
 namespace algorithm {
